@@ -7,21 +7,27 @@ import PrevTest from './PrevTest';
 import PrevPropsTest from './PrevPropsTest';
 import TestBootstrap from './TestBootstrap';
 import ControlledComp from './ControlledComp';
+import Nav from "./Nav";
+import { Routes, Route } from 'react-router-dom';
+import NoPageFound from './NoPageFound';
+import TestFormFields from './TestFormFields';
 
 function App() {
   return (
     <div className="App">
-          <div>Learn React</div>
-      <Test/>
-      <TestNew/>
-      <ParentComponet/>
-      <PrevTest/>
-      <PrevPropsTest/>
-      <TestBootstrap/>
-      <ControlledComp/>
+        <Nav />
+        <Routes>
+          <Route path='/learnRef' element={<TestNew />}></Route>
+          <Route path='/learnContext' element={<ParentComponet />}></Route>
+          <Route path='/learnPrevState' element={<PrevTest />}></Route>
+          <Route path='/learnPrevProps' element={<PrevPropsTest />}></Route>
+          <Route path='/learnArrayRendering' element={<TestBootstrap />}></Route>
+          <Route path='/learnControlledComponent' element={<ControlledComp />}></Route>
+          <Route path='/testFormFields' element={<TestFormFields />}></Route>
+          <Route exact path='/' element={<Test />}></Route>
+          <Route path="*" element={<NoPageFound />}></Route>
+        </Routes>
     </div>
-    
-  );
+  )
 }
-
 export default App;
