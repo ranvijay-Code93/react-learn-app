@@ -13,6 +13,7 @@ function Nav() {
                 <Navig.Item><Link className = "nav-link" to="/learnArrayRendering">Learn array rendering</Link></Navig.Item>
                 <Navig.Item><Link className = "nav-link" to="/learnControlledComponent">Learn controlled component</Link></Navig.Item>
                 <Navig.Item><Link className = "nav-link" to="/testFormFields">Learn form fields</Link></Navig.Item>
+                <Navig.Item><Link className = "nav-link" to="/formValidationNoLib">Learn form validation without library</Link></Navig.Item>
             </Navig>
             <hr />
         </>

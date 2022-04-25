@@ -11,6 +11,7 @@ import Nav from "./Nav";
 import { Routes, Route } from 'react-router-dom';
 import NoPageFound from './NoPageFound';
 import TestFormFields from './TestFormFields';
+import FormValidationNoLib from './FormValidationNoLib';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path='/learnArrayRendering' element={<TestBootstrap />}></Route>
           <Route path='/learnControlledComponent' element={<ControlledComp />}></Route>
           <Route path='/testFormFields' element={<TestFormFields />}></Route>
+          <Route path='/formValidationNoLib' element={<FormValidationNoLib />}></Route>
           <Route exact path='/' element={<Test />}></Route>
           <Route path="*" element={<NoPageFound />}></Route>
         </Routes>
