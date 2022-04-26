@@ -54,9 +54,15 @@
   border-radius: 5px;
   background: #17a2b8;
 }
-button {
+.container button {
   background: #0563b4 !important;
 }
 p {
   color: red;
+}
+.btnTab {
+  margin : 10px;
+}
+.navBg {
+  background-color: #a6cbeb;
 }

@@ -12,23 +12,29 @@ import { Routes, Route } from 'react-router-dom';
 import NoPageFound from './NoPageFound';
 import TestFormFields from './TestFormFields';
 import FormValidationNoLib from './FormValidationNoLib';
+import Contacts from './axiosTest/Contacts';
+import AddContact from './axiosTest/AddContact';
+import EditContact from './axiosTest/EditContact';
 
 function App() {
   return (
     <div className="App">
-        <Nav />
-        <Routes>
-          <Route path='/learnRef' element={<TestNew />}></Route>
-          <Route path='/learnContext' element={<ParentComponet />}></Route>
-          <Route path='/learnPrevState' element={<PrevTest />}></Route>
-          <Route path='/learnPrevProps' element={<PrevPropsTest />}></Route>
-          <Route path='/learnArrayRendering' element={<TestBootstrap />}></Route>
-          <Route path='/learnControlledComponent' element={<ControlledComp />}></Route>
-          <Route path='/testFormFields' element={<TestFormFields />}></Route>
-          <Route path='/formValidationNoLib' element={<FormValidationNoLib />}></Route>
-          <Route exact path='/' element={<Test />}></Route>
-          <Route path="*" element={<NoPageFound />}></Route>
-        </Routes>
+      <Nav />
+      <Routes>
+        <Route path='/learnRef' element={<TestNew />}></Route>
+        <Route path='/learnContext' element={<ParentComponet />}></Route>
+        <Route path='/learnPrevState' element={<PrevTest />}></Route>
+        <Route path='/learnPrevProps' element={<PrevPropsTest />}></Route>
+        <Route path='/learnArrayRendering' element={<TestBootstrap />}></Route>
+        <Route path='/learnControlledComponent' element={<ControlledComp />}></Route>
+        <Route path='/testFormFields' element={<TestFormFields />}></Route>
+        <Route path='/formValidationNoLib' element={<FormValidationNoLib />}></Route>
+        <Route path='/axiosTest/contacts' element={<Contacts />}></Route>
+        <Route path="/axiosTest/contacts/:id" element={<EditContact />}></Route>
+        <Route path='/axiosTest/contacts/add' element={<AddContact />}></Route>
+        <Route exact path='/' element={<Test />}></Route>
+        <Route path="*" element={<NoPageFound />}></Route>
+      </Routes>
     </div>
   )
 }
