@@ -13,14 +13,14 @@ function AddContact() {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(formValues);
-        debugger
+        
         AddUser(formValues);
 
         return true;
     }
 
     const AddUser = async (user) => {
-        debugger
+        
         const userData = { ...user, id: Math.floor(Math.random() * 100) }
         await api.post('/users', userData);
         navigate('/axiosTest/contacts');

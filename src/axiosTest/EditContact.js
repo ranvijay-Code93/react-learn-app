@@ -7,13 +7,13 @@ function EditContact() {
     const [formValues, setFormValues] = useState({});
 
     const getContact=async (id)=>{
-        debugger;
+        
         const response = await api.get(`/users/${id}`);
         return response.data;
     }
 
     useEffect(()=>{
-        debugger;
+        
         const getUser = async () => {
             const user = await getContact(params.id);
             if (user) setFormValues(user);
@@ -22,14 +22,14 @@ function EditContact() {
     },[params.id]);
 
     const handleChange = (e) => {
-        debugger
+        
         const { name, value } = e.target;
         setFormValues({ ...formValues, [name]: value });
     }
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(formValues);
-        debugger
+        
         EditUser(formValues);
 
         return true;
@@ -37,7 +37,7 @@ function EditContact() {
 
     
     const EditUser = async (user) => {
-        debugger
+        
         await api.put(`/users/${user.id}`, user);
         navigate('/axiosTest/contacts');
     }
